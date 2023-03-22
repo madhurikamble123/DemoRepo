@@ -13,12 +13,8 @@ case $isPresent in
         ;;
 
         1)
-        echo "Employee is working as full time";
+        echo "Employee is working as part time";
         workingHour=8;
         ;;
 
-        2)
-        echo "Employee is working as part time";
-        workingHour=4;
-        ;;
 esac
