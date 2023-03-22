@@ -4,6 +4,8 @@ echo Welcome to Employee Wage Computation Program on Master Branch
 
 
 isPresent=$((RANDOM%3));
+perHourSalary=20;
+workingHour=0;
 case $isPresent in
         0)
         echo "Employee is absent";
@@ -11,7 +13,7 @@ case $isPresent in
         ;;
 
         1)
-        echo "Employee is present";
+        echo "Employee is working as full time";
         workingHour=8;
         ;;
 
