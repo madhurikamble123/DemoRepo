@@ -9,7 +9,7 @@ workingHour=0;
 totalSalary=0;
 totalWorkingHour=0;
 day=1;
-while [[ $day -le 20 ]]
+while [[ $day -le 20 && $totalWorkingHour -lt 100 ]]
 do
         isPresent=$((RANDOM%3));
         case $isPresent in
@@ -28,6 +28,14 @@ do
                 workingHour=4;
                 ;;
         esac
+        totalWorkingHour=$(($totalWorkingHour + $workingHour));
+        if [ $totalWorkingHour -gt 100 ]
+        then
+                totalWorkingHour=$(($totalWorkingHour - $workingHour));
+                break;
+        fi
+        salary=$(($perHourSalary * $workingHour));
+        totalSalary=$(($totalSalary + $salary));
         ((day++));
 done
-
+echo "Employee has earned $totalSalary $ in a month (Total working Hour : $totalWorkingHour)";
