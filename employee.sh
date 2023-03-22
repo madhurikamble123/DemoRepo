@@ -4,6 +4,7 @@ echo Welcome to Employee Wage Computation Program on Master Branch
 #!/bin/bash -x
 
 
+
 perHourSalary=20;
 workingHour=0;
 totalSalary=0;
@@ -43,3 +44,4 @@ done
 echo "Employee has earned $totalSalary $ in a month ";
 echo "The employee total working Hours is : $totalWorkingHour";
 echo "The daily wage of the employee is "${salaries_array[@]}
+echo "The employee worked for a total of "$day
