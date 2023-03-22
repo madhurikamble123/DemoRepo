@@ -35,8 +35,11 @@ do
                 break;
         fi
         salary=$(($perHourSalary * $workingHour));
+	index=$(($day-1))
+	salaries_array[((index))]=$salary
         totalSalary=$(($totalSalary + $salary));
         ((day++));
 done
 echo "Employee has earned $totalSalary $ in a month ";
 echo "The employee total working Hours is : $totalWorkingHour";
+echo "The daily wage of the employee is "${salaries_array[@]}
